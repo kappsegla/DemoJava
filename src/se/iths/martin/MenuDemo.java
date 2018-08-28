@@ -6,9 +6,6 @@ import java.util.Scanner;
 public class MenuDemo {
 
 
-
-
-
     public static void printMenu() {
 
 //        String[] menuOptions = new String[4];
@@ -20,16 +17,13 @@ public class MenuDemo {
 //            System.out.println(menuOptions[i]);
 //        }
 
-         String[] menuOptions = new String[] {
-                 "1. Alternativ 1","2. Alternativ 2",
-                 "3. abc...","0. Avsluta" };
+        String[] menuOptions = new String[]{
+                "1. Alternativ 1", "2. Alternativ 2",
+                "3. abc...", "0. Avsluta"};
 
-        for ( String s : menuOptions ) {
+        for (String s : menuOptions) {
             System.out.println(s);
         }
-
-        menuOptions[4] = "Hej";
-
     }
 
     public static void main(String[] args) {
@@ -87,9 +81,8 @@ public class MenuDemo {
         myArray[10] = 0;
 
         for (int i = 0; i < 11; i++) {
-            System.out.println( myArray[i] );
+            System.out.println(myArray[i]);
         }
-
 
 
 //        for (int i = 10; i >= 0; i--) {
