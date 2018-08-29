@@ -6,7 +6,6 @@ public class Rectangle {
     private int height;
     private int width;
     private int color;
-    private boolean square;
 
     //Getter for calculated Area,no backing field, no setter, Read-only
     public int getArea() {
@@ -15,11 +14,7 @@ public class Rectangle {
 
     //Getter for boolean values are called is
     public boolean isSquare() {
-        return square;
-    }
-
-    public void setSquare(boolean square) {
-        this.square = square;
+        return getWidth() == getHeight();
     }
 
     public int getHeight() {
@@ -46,4 +41,23 @@ public class Rectangle {
     public void setColor(int color) {
         this.color = color;
     }
+
+    public double calculateBoxVolume(int boxHeight){
+
+        return getArea() * boxHeight;
+    }
+
+    public double calculateBoxVolume(int boxHeight, boolean onlyForSquare){
+
+        if( onlyForSquare && isSquare() || !onlyForSquare)
+            return getArea() * boxHeight;
+        else
+            return 0.0;
+    }
+
+    public double calculateBoxVolume(double boxHeight){
+
+        return getArea() * boxHeight;
+    }
+
 }
