@@ -14,6 +14,8 @@ public class Övning1Uppgift9 {
         String text;
         int length = 0;
         String[] strings = new String[10];
+        //Alternativt, använd ArrayList<String> som typ. Den växer automatiskt
+        //när mer plats behövs.
         int counter = 0;
 
         while (true) {
