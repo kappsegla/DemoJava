@@ -1,6 +1,7 @@
 package se.iths.martin;
 
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class MenuDemo {
