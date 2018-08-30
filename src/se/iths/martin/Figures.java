@@ -1,17 +1,20 @@
 package se.iths.martin;
 
+import java.util.Scanner;
+
 public class Figures {
 
     public static void main(String[] args){
 
-        Rectangle rectangle = new Rectangle();
-        //Rectangle rectangle2 = new Rectangle();
 
-        rectangle.setWidth(10);
-        rectangle.setHeight(20);
-
-
-        System.out.println(rectangle.calculateBoxVolume(10,false));
+//        Rectangle rectangle = new Rectangle();
+//        //Rectangle rectangle2 = new Rectangle();
+//
+//        rectangle.setWidth(10);
+//        rectangle.setHeight(20);
+//
+//
+//        System.out.println(rectangle.calculateBoxVolume(10,false));
 //
 //        rectangle2.setHeight(5);
 //        rectangle2.setWidth(4);
