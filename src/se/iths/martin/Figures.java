@@ -6,7 +6,10 @@ public class Figures {
 
     public static void main(String[] args){
         Color color = new Color(255,255,255);
-        Car c = new Car( );
+
+        Car c = new Car( false, color );
+        Car c2 = new Car( c );
+
 
 
 //        Rectangle rectangle = new Rectangle();

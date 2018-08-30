@@ -17,4 +17,9 @@ public class Car {
         this.started = started;
         this.color = color;
     }
+
+    public Car(Car c) {
+        this.started = c.started;
+        this.color = new Color(c.color);
+    }
 }
