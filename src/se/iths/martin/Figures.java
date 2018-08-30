@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Figures {
 
     public static void main(String[] args){
+        Color color = new Color(255,255,255);
+        Car c = new Car( );
 
 
 //        Rectangle rectangle = new Rectangle();

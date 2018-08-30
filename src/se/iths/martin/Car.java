@@ -6,15 +6,15 @@ public class Car {
 
     //Default Constructor
     public Car() {
-
+        this(false);
     }
 
     public Car(boolean started) {
-
+        this(started, new Color(0, 0, 0));
     }
 
     public Car(boolean started, Color color) {
-
+        this.started = started;
+        this.color = color;
     }
-
 }
