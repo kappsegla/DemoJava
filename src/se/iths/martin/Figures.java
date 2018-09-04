@@ -1,7 +1,5 @@
 package se.iths.martin;
 
-import java.util.Scanner;
-
 public class Figures {
 
     public static void main(String[] args){
@@ -16,12 +14,16 @@ public class Figures {
         Point p3 = new Point(p);
         Point p4 = new Point(new double[]{1.0,1.0});
 
+
         System.out.println(p.distanceTo(p2));
 
         Point[] pArray = new Point[]{new Point(1.0,1.0),
                                 new Point(2.0,2.0)};
 
         Point[] clonedArray = pArray.clone();
+
+        System.out.println(  );
+
 
 
 //        Rectangle rectangle = new Rectangle();
