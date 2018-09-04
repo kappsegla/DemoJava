@@ -2,7 +2,11 @@ package se.iths.martin;
 
 public class Figures {
 
+    public static final double PI = 3.141592;
+
+
     public static void main(String[] args){
+
         Color color = new Color(255,255,255);
 
         Car c = new Car( false, color );
