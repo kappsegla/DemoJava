@@ -1,4 +1,6 @@
-package se.iths.martin;
+package se.iths.martin.inheritance;
+
+import java.util.ArrayList;
 
 public class Point {
 
@@ -14,6 +16,10 @@ public class Point {
         this.y = y;
     }
 
+    /**
+     *
+     * @param point
+     */
     public Point(Point point) {
         this.x = point.x;
         this.y = point.y;
@@ -43,12 +49,25 @@ public class Point {
         this.y = y;
     }
 
+    /**
+     *
+     * @param point another point i space
+     * @return distance in 2D x,y-plane to point
+     */
     public double distanceTo(Point point) {
         double a = this.x - point.x;
         double b = this.y - point.y;
 
         double d = Math.sqrt(  a*a + b*b );
 
+    ArrayList<Integer> i = new ArrayList<>();
+        i.add(2);
+
         return d;
+    }
+
+    @Override
+    public String toString( ) {
+        return super.toString();
     }
 }

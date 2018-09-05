@@ -1,5 +1,7 @@
 package se.iths.martin;
 
+import se.iths.martin.inheritance.Point;
+
 public class Figures {
 
     public static final double PI = 3.141592;
