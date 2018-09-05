@@ -2,7 +2,7 @@ package se.iths.martin.inheritance;
 
 public class Circle {
 
-    private float radius;
+    protected float radius;
 
     public Circle(float radius) {
         this.radius = radius;
@@ -18,7 +18,7 @@ public class Circle {
 
     @Override
     public String toString() {
-        return "radius=" + radius;
+        return "radius:" + radius;
     }
 
     @Override

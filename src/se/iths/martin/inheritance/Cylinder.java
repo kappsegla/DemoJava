@@ -18,6 +18,11 @@ public class Cylinder extends Circle {
     }
 
     @Override
+    public String toString() {
+        return "radius=" + radius + "\nheight=" + height;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;
@@ -27,7 +32,12 @@ public class Cylinder extends Circle {
         }
 
         Cylinder guest = (Cylinder) obj;
-        return Float.floatToIntBits(getRadius()) == Float.floatToIntBits(guest.getRadius())
+        return Float.floatToIntBits(radius) == Float.floatToIntBits(guest.radius)
                 && Float.floatToIntBits(height) == Float.floatToIntBits(guest.height);
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(radius, height);
     }
 }
