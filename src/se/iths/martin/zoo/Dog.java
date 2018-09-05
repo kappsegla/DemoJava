@@ -2,7 +2,8 @@ package se.iths.martin.zoo;
 
 public class Dog extends Mammal {
 
-    public void talk(){
+    @Override
+    public void talk() {
         System.out.println("Voff");
     }
 }
