@@ -12,9 +12,5 @@ public class Zoo {
 
         Mammal mammal = new Dog();
         mammal.talk();
-
-
-
-
     }
 }

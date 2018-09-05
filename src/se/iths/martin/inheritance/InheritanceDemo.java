@@ -7,6 +7,7 @@ public class InheritanceDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+
         Cylinder cylinder = new Cylinder(1.0f, 2.0f);
         //Cylinder can be a circle
         Circle circle = cylinder;
@@ -14,6 +15,9 @@ public class InheritanceDemo {
         Object object = circle;
         //Cylinder can be object too
         Object object2 = cylinder;
+
+        System.out.println( circle );
+
 
         //Check type before trying to cast
         if (object.getClass() == Cylinder.class)

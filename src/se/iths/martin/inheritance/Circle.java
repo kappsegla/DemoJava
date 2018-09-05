@@ -16,6 +16,10 @@ public class Circle {
         this.radius = radius;
     }
 
+    @Override
+    public String toString() {
+        return "radius=" + radius;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -27,7 +31,7 @@ public class Circle {
         }
 
         Circle guest = (Circle) obj;
-        return radius == guest.radius;
+        return Float.floatToIntBits(radius) == Float.floatToIntBits(guest.radius);
     }
 
     @Override public int hashCode() {

@@ -16,4 +16,18 @@ public class Cylinder extends Circle {
     public void setHeight(float height) {
         this.height = height;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Cylinder guest = (Cylinder) obj;
+        return Float.floatToIntBits(getRadius()) == Float.floatToIntBits(guest.getRadius())
+                && Float.floatToIntBits(height) == Float.floatToIntBits(guest.height);
+    }
 }
