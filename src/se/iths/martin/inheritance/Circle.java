@@ -34,7 +34,8 @@ public class Circle {
         return Float.floatToIntBits(radius) == Float.floatToIntBits(guest.radius);
     }
 
-    @Override public int hashCode() {
+    @Override
+    public int hashCode() {
         //simple one-line implementation
         return java.util.Objects.hash(radius);
     }
