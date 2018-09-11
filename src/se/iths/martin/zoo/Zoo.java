@@ -10,7 +10,7 @@ public class Zoo {
         dog.talk();
         cat.talk();
 
-        Mammal mammal = new Dog();
+        Mammal mammal = cat;
         mammal.talk();
     }
 }
