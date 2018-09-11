@@ -29,6 +29,11 @@ public class Zoo {
 
         Mammal mammal = dog;
         mammal.talk();
+
+        //Check if an object is of specific type
+        //If true, typecast and call methods.
+        if(mammal instanceof Pet)
+            ((Pet)mammal).isCute();
     }
 }
 
