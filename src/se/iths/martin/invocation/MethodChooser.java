@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class MethodChooser {
     public static void main(String[] args) {
-        ChooseMethod m = new ChooseMethod();
+        ChooseMethod m = new SubChooseMethod();
         m.doSomething(10);
     }
 }
