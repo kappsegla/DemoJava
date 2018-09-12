@@ -1,5 +1,7 @@
 package se.iths.martin.zoo;
 
+import java.util.ArrayList;
+
 public class Zoo {
 
 
@@ -30,10 +32,15 @@ public class Zoo {
         Mammal mammal = dog;
         mammal.talk();
 
+
         //Check if an object is of specific type
         //If true, typecast and call methods.
+        //Prefer automatic behaivor with override if possible.
+        //Only use if we have a collection of objects where not all
+        //have a specific interface implemented.
         if(mammal instanceof Pet)
             ((Pet)mammal).isCute();
+
     }
 }
 
