@@ -1,7 +1,6 @@
 package se.iths.martin.sorting;
 
-public class Book {
-
+public class Book implements Comparable<Book> {
 
     public Book(String title) {
         this("No author", title);
@@ -43,5 +42,8 @@ public class Book {
     private String author;
     private String title;
 
-
+    @Override
+    public int compareTo(Book o) {
+        return author.compareTo(o.author);
+    }
 }
