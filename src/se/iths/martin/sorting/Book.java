@@ -1,5 +1,12 @@
 package se.iths.martin.sorting;
 
+import java.io.IOException;
+import java.io.ObjectStreamException;
+import java.io.Serializable;
+import java.text.Collator;
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Book implements Comparable<Book> {
 
     public Book(String title) {
@@ -44,6 +51,9 @@ public class Book implements Comparable<Book> {
 
     @Override
     public int compareTo(Book o) {
-        return author.compareTo(o.author);
+        Collator collator = Collator.getInstance(new Locale("en","US"));
+        collator.setStrength(Collator.CANONICAL_DECOMPOSITION);
+        return collator.compare(this.getAuthor(),o.getAuthor());
+        //return author.compareTo(o.author);
     }
 }

@@ -1,8 +1,7 @@
 package se.iths.martin.zoo;
 
-public class Mammal {
+public abstract class Mammal {
 
-    public void talk(){
+    abstract public void talk();
 
-    }
 }

@@ -29,7 +29,7 @@ public class Zoo {
         dog.talk();
         cat.talk();
 
-        Mammal mammal = dog;
+        Mammal mammal = new Dog();
         mammal.talk();
 
 
