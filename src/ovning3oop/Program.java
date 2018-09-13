@@ -6,7 +6,8 @@ public class Program {
 
     enum ShapeType {
         RECTANGLE,
-        ELLIPSE
+        ELLIPSE,
+        RESIZABLE_RECTANGLE
     }
 
 
@@ -17,6 +18,8 @@ public class Program {
             shape = new Rectangle(0, 0);
         else if(type == ShapeType.ELLIPSE)
             shape = new Ellipse(0,0);
+        else if(type == ShapeType.RESIZABLE_RECTANGLE)
+            shape = new ResizableRectangle(0,0);
 
         return shape;
     }
@@ -30,10 +33,16 @@ public class Program {
 
         Shape shape = program.createShape(ShapeType.RECTANGLE);
         Shape shape1 = program.createShape(ShapeType.ELLIPSE);
+        Shape shape2 = program.createShape(ShapeType.RESIZABLE_RECTANGLE);
 
         program.viewShapeInfo(shape);
         program.viewShapeInfo(shape1);
 
+        shape2.setLength(10);
+        shape2.setWidth(20);
 
+        if( shape2 instanceof Resizable )
+            ((Resizable)shape2).resize(50);
+        program.viewShapeInfo(shape2);
     }
 }
