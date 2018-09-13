@@ -9,7 +9,7 @@ public abstract class Shape {
 
     @Override
     public String toString() {
-        return "Length: " + length + " Width: " + width;
+        return this.getClass().getSimpleName() + "{Length: " + length + " Width: " + width +"}";
     }
 
     public abstract double getArea();
