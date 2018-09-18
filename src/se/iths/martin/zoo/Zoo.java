@@ -1,6 +1,8 @@
 package se.iths.martin.zoo;
 
+import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Zoo {
 
@@ -10,6 +12,10 @@ public class Zoo {
     }
 
     public static void main(String[] args) {
+
+
+
+
 
         Dog dog = new Dog();
         Cat cat = new Cat();

@@ -30,6 +30,16 @@ public class Book implements Comparable<Book> {
         return author + " - " + title;
     }
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
     public String getAuthor() {
         return author;
     }

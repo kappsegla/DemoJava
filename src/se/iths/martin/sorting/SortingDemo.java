@@ -39,9 +39,10 @@ public class SortingDemo {
                 return myCollator.compare(o1.getAuthor(), o2.getAuthor());
             }
         };
-
-        Collections.sort(books, sortByAuthorComparator);
-
+        //Old Collections sort
+        //Collections.sort(books, sortByAuthorComparator);
+        //New java8 stream sort
+        books.sort(sortByAuthorComparator);
 
         //Iteration
 //        for (int i = 0; i < books.size(); i++) {
