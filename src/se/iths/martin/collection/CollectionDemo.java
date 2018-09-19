@@ -28,6 +28,9 @@ public class CollectionDemo {
         }
     }
 
+    public void test() {
+        return;
+    }
 
     public String getRegNumber() {
         Scanner sc = new Scanner(System.in);
@@ -45,6 +48,7 @@ public class CollectionDemo {
 
     public static void main(String[] args) {
         CollectionDemo c = new CollectionDemo();
+        c.getRegNumber();
     }
 }
 //Unchecked exception
