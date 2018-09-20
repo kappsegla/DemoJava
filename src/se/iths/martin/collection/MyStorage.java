@@ -3,6 +3,7 @@ package se.iths.martin.collection;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class MyStorage<T> implements DoIt<String>{
 
@@ -11,6 +12,14 @@ public class MyStorage<T> implements DoIt<String>{
 
     MyStorage(){
         storage = new Object[10];
+    }
+
+    public void forEach(Consumer<? super T> consumer){
+
+        for (int i = 0; i < size() ; i++) {
+            consumer.accept(get(i));
+        }
+
     }
 
     public void add(T obj){

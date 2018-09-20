@@ -7,13 +7,14 @@ import java.util.function.Consumer;
 public class Storage {
     public static void main(String[] args) {
 
-        //MyStorage<Integer> myStorage = new MyStorage<>();
+        MyStorage<Integer> myStorage = new MyStorage<>();
 
         ArrayList<Integer> arrayList = new ArrayList<>();
         ArrayList<String> stringArrayList = new ArrayList<>();
 
         for (int i = 0; i < 20; i++) {
             arrayList.add(i);
+            myStorage.add(i);
             stringArrayList.add("Det här är talet " + i);
         }
 
@@ -31,9 +32,25 @@ public class Storage {
 //        };
 //        arrayList.forEach(consumer);
 
-        arrayList.forEach((integer) -> System.out.println(integer));
+        //      arrayList.forEach((integer) -> System.out.println(integer));
+        //      stringArrayList.forEach(text -> System.out.println(text));
 
-
+        //Lamda implementation of interface
+        myStorage.forEach(text -> System.out.println(text));
+        //Method reference to static method matching interface method signature
+        //myStorage.forEach(Storage::accept);
+        //Method reference to instance method matching interface method signature
+        //Storage storage = new Storage();
+        //myStorage.forEach(storage::method1);
     }
+
+    public static void accept(Integer integer) {
+        System.out.println(integer);
+    }
+
+    public void method1(Integer integer){
+        System.out.println(integer);
+    }
+
 
 }
