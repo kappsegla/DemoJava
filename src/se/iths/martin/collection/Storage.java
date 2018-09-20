@@ -37,6 +37,9 @@ public class Storage {
 
         //Lamda implementation of interface
         myStorage.forEach(text -> System.out.println(text));
+
+        //myStorage.forEach(System.out::println);
+
         //Method reference to static method matching interface method signature
         //myStorage.forEach(Storage::accept);
         //Method reference to instance method matching interface method signature
