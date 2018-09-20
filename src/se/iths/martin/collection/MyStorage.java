@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
-public class MyStorage<T> {
+public class MyStorage<T> implements DoIt<String>{
 
     Object[] storage;
     int count;
@@ -38,7 +38,10 @@ public class MyStorage<T> {
         count = 0;
     }
 
-
-
+    @Override
+    public String doSomething(String text) {
+        System.out.println(text + size());
+        return "";
+    }
 
 }
