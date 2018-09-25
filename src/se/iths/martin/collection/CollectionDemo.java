@@ -7,7 +7,7 @@ import java.util.*;
 class Node {
     String s;
     Node next;
-    Node previous;
+  //  Node previous;
 }
 
 public class CollectionDemo {

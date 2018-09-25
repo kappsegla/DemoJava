@@ -1,5 +1,6 @@
 package se.iths.martin.collection;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 public class Gen<T> {
