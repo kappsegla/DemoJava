@@ -1,13 +1,15 @@
 package se.iths.martin.sorting;
 
-import java.io.IOException;
-import java.io.ObjectStreamException;
 import java.io.Serializable;
 import java.text.Collator;
 import java.util.Locale;
-import java.util.Scanner;
 
-public class Book implements Comparable<Book> {
+public class Book implements Comparable<Book>, Serializable {
+
+    public static final long serialVersionUID = 763247632446732476L;
+
+    public Book(){
+    }
 
     public Book(String title) {
         this("No author", title);

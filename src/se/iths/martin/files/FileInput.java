@@ -1,9 +1,16 @@
 package se.iths.martin.files;
 
+import se.iths.martin.sorting.Book;
+
 import java.io.*;
-import java.util.InvalidPropertiesFormatException;
-import java.util.Properties;
-import java.util.Scanner;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FileInput {
 
@@ -90,18 +97,96 @@ public class FileInput {
 
     }
 
+    public static List<String> names(){
 
-    public static void main(String[] args) {
+       // String path = "/file.txt";
+        File file = new File("C:\\Users\\Martin\\Documents\\code.txt");
+        //URL url = FileInput.class.getResource("/file.txt");
+        try(Stream<String> stream = Files.lines(Paths.get(file.toURI()))){
 
-        try {
-            readTextFileFromResources();
+            return stream.distinct().filter(string -> string.matches("[A].*")).collect(Collectors.toList());
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
+    }
+
+    public static void saveBinaryData(File file, double d){
+
+        try(DataOutputStream outputStream
+                    = new DataOutputStream(new FileOutputStream(file)))
+        {
+            outputStream.writeDouble(d);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static double loadBinaryData(File file){
+        try(DataInputStream inputStream
+            =new DataInputStream(new FileInputStream(file))){
+            return inputStream.readDouble();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return 0.0;
+    }
+
+
+    public static void main(String[] args) {
+        ArrayList<Book> books = new ArrayList<>();
+        Book book = new Book("Martin2", "Java Programming");
+        books.add(book);
+
+        File file = new File("C:\\Users\\Martin\\Documents\\books.bin");
+
+        //Save object to file
+        try(ObjectOutputStream out =
+                    new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(file)))){
+            out.writeObject(books);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //Load from file
+        try(ObjectInputStream in =
+                    new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)))){
+            ArrayList<Book> b = (ArrayList<Book>) in.readObject();
+            System.out.println(b.get(0));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+//        File file = new File("C:\\Users\\Martin\\Documents\\binary.bin");
+//        saveBinaryData(file, 1234.56789);
+//
+//        System.out.println(loadBinaryData(file));
+//
+
+
+
+//        try {
+//            readTextFileFromResources();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         //readTextFileFromAbsolutePath();
         //readTextFileWithEncoding();
 
-
+     //   List<String> names = names();
+     //   names.forEach(System.out::println);
 
 
     }
