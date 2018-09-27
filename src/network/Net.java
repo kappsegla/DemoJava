@@ -24,6 +24,7 @@ public class Net {
             dataOutputStream.write(request.getBytes());
             dataOutputStream.flush();
 
+
             //If you handle larger data use a bigger buffer size
             byte[] buffer = new byte[1024];
             int read;
