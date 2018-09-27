@@ -1,4 +1,4 @@
-package threads;
+package se.iths.martin.threads;
 
 
 
@@ -9,10 +9,12 @@ public class MultiThreadsDemo {
         System.out.println("Runnable körs");
     }
 
-
     public static void main(String[] args) {
         MyThread thread1 = new MyThread();
         thread1.start();
+
+//        Thread thread = new Thread(()->doSomething());
+//        thread.start();
 
         while(thread1.isAlive())
         {

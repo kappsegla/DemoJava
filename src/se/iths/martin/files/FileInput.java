@@ -138,6 +138,11 @@ public class FileInput {
     }
 
 
+    public void save(String filename, Object object)
+    {
+
+    }
+
     public static void main(String[] args) {
         ArrayList<Book> books = new ArrayList<>();
         Book book = new Book("Martin2", "Java Programming");

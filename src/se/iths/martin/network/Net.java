@@ -1,7 +1,6 @@
-package network;
+package se.iths.martin.network;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.net.*;
 public class Net {
 

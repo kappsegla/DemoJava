@@ -1,4 +1,4 @@
-package threads;
+package se.iths.martin.threads;
 
 public class MyThread extends Thread {
 
