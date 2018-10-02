@@ -6,9 +6,11 @@ public abstract class Vehicle {
     private Engine engine;
     private Person owner;
 
+
     public Person getOwner() {
         return owner;
     }
+
 
     public void setOwner(Person owner) {
         if( owner == null)
@@ -25,13 +27,16 @@ public abstract class Vehicle {
         this.engine = engine;
     }
 
-    public String getRegnr() {
-        return regnr;
-    }
 
     public int getWeight() {
         return weight;
     }
+
+
+    public String getRegnr() {
+        return regnr;
+    }
+
 
     public void setWeight(int weight) {
         this.weight = weight;
