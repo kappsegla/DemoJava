@@ -6,8 +6,8 @@ public class Car extends Vehicle {
 
     private int passengers;
 
-    public Car(String regnr, int weight, Engine engine, int passengers) {
-        super(regnr, weight,engine);
+    public Car(String regnr, int weight, Engine engine,Person owner, int passengers) {
+        super(regnr, weight,engine,owner);
         this.passengers = passengers;
     }
 
