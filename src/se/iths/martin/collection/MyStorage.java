@@ -52,5 +52,4 @@ public class MyStorage<T> implements DoIt<String>{
         System.out.println(text + size());
         return "";
     }
-
 }

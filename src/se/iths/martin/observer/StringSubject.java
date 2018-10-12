@@ -8,7 +8,7 @@ public class StringSubject extends Subject {
     }
 
     public void setField(String field) {
-        if( !this.field.equals(field) && field != null) {
+        if( field != null && !this.field.equals(field) ) {
             this.field = field;
             notifyObservers();
         }
