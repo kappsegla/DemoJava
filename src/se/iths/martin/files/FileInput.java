@@ -40,6 +40,15 @@ public class FileInput {
         }
     }
 
+    public static void writeTextFile(File file)
+    {
+        try( FileWriter fileWriter = new FileWriter(file)){
+            fileWriter.write("Text to write");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void readTextFileWithEncoding() {
         File file = new File("C:\\Users\\Martin\\Documents\\code.txt");
 

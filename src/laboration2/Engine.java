@@ -1,6 +1,10 @@
 package laboration2;
 
-public abstract class Engine {
+import java.io.Serializable;
+
+public abstract class Engine implements Serializable {
+
+    //https://www.mkyong.com/java/how-to-generate-serialversionuid/
 
     public String capacityUnits;
 
