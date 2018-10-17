@@ -40,6 +40,20 @@ public class FileInput {
         }
     }
 
+    /**
+     * Writes information to a textfile
+     * @param file File to write to
+     * @param text String with text to write to file
+     */
+    public static void writeTextFile(File file, String text)
+    {
+        try( FileWriter fileWriter = new FileWriter(file)){
+            fileWriter.write(text);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void readTextFileWithEncoding() {
         File file = new File("C:\\Users\\Martin\\Documents\\code.txt");
 
