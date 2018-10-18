@@ -2,6 +2,7 @@ package se.iths.martin.factory;
 
 import ovning3oop.Shape;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Demo {
@@ -20,6 +21,12 @@ public class Demo {
         sp.height = 100.0;
         sp.width = 100.0;
         Shape shape = ShapeFactory.createShape(sp);
+
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("type","ellipse");
+        hashMap.put("height",100.0);
+        hashMap.put("width",100.0);
+        Shape shape2 = ShapeFactory.createShape(hashMap);
 
     }
 }
