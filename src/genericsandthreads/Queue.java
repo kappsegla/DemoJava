@@ -12,8 +12,7 @@ public class Queue<T> {
      * @param object Object to put last in queue
      */
     public void push(T object) {
-
-
+        list.add(object);
     }
 
     /**
@@ -21,6 +20,8 @@ public class Queue<T> {
      * @return first object from queue
      */
     public T first() {
+        if( size() > 0)
+            return list.remove(0);
         return null;
     }
 
