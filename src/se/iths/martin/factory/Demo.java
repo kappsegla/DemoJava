@@ -14,7 +14,7 @@ public class Demo {
         String format = in.nextLine();
 
         FileExporter ab = FileExporterFactory.createAlfaBeta(format);
-       // ab.saveToFile();
+       // ab.saveToFile(file, list);
 
         ShapeParameters sp = new ShapeParameters();
         sp.type = "ellipse";
