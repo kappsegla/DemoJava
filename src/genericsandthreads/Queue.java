@@ -11,18 +11,24 @@ public class Queue<T> {
      * Add object last in queue
      * @param object Object to put last in queue
      */
-    public void push(T object) {
+    public synchronized void push(T object) {
         list.add(object);
+        notify();
     }
 
     /**
-     * Return first object from queue and removes it
+     * Return first object from queue if present otherwise blocks and waits
      * @return first object from queue
      */
-    public T first() {
-        if( size() > 0)
-            return list.remove(0);
-        return null;
+    public synchronized T first() {
+        while( size() == 0) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        return list.remove(0);
     }
 
     /**
