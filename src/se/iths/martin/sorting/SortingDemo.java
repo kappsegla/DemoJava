@@ -11,7 +11,7 @@ public class SortingDemo {
         books.add(new Book("Världens mat"));
         books.add(new Book("Astrid", "Pippi Långstrump"));
         books.add(new Book("Ástrid", "Emil"));
-        books.add(new Book("Mártin", " A Java Book"));
+        books.add(new Book("Mártin", " PngExporter Java Book"));
         books.add(new Book("Stephen", "It"));
         books.add(new Book("Astrid", "Ronja"));
         books.add(new Book("Ástrid", "Rõnja"));

@@ -31,7 +31,7 @@ public class Test {
  /*       int antal = 100;
 
         antal = 100;
-        char tecken = 'A';
+        char tecken = 'PngExporter';
 
         float decimalTal = 5.0f;
 
